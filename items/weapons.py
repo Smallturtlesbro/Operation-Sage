@@ -1,16 +1,16 @@
-class dagger:
+class Dagger:
     def __init__(self):
         self.name = "Dagger"
         self.description = "A small dagger with some rust."
         self.damage = 10
 
-class sword:
+class Sword:
     def __init__(self):
         self.name = "Sword"
         self.description = "A short sword."
         self.damage = 12
 
-class rock:
+class Rock:
     def __init__(self):
         self.name = "Rock"
         self.description = "A fist sized rock, could be used for bludgeoning"
