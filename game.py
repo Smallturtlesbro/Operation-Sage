@@ -1,3 +1,5 @@
+def Start()
+
 print("Escape from the cell!")
 
 print("you see a Bed, the Bars, a Mirror, and a Chamber pot.")
