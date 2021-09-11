@@ -1,22 +1,43 @@
-def Start()
+import items.game_text
 
-print("Escape from the cell!")
 
-print("you see a Bed, the Bars, a Mirror, and a Chamber pot.")
+def start():
+    print(items.game_text.intro_message)
+    print(items.game_text.intro_q)
 
-action_input = input('Action: ')
 
-if action_input == 'Bed':
-    print("You walk over to the bed.")
+    while True:
+        answer = input("\nWhat should I do?\n>")
 
-elif action_input == 'Mirror':
-    print("You walk to the mirror.")
+        failed = "Great, now the world has been destroyed because you decided you didn't want to choose one of the " \
+                 "options."
 
-elif action_input == 'Chamber pot':
-    print("You walk over to the chamber pot.")
+        if answer == "l" or answer == "listen":
+            # if l or listen is typed for answer
+            listen()
+        elif answer == "d" or answer == "disregard":
+            # if d or disregard is typed for answer
+            disregard()
+        else:
+            # calls game_over() function with a "reason" argument
+            game_over(failed)
 
-elif action_input == 'Bars':
-    print("You walk over to the bars.")
 
-else:
-    print("Invalid action!")
+# listen to the group
+def disregard():
+    print(items.game_text.disregard_text)
+
+
+def listen():
+    print(items.game_text.listen)
+
+
+def follow():
+    print(items.game_text.follow)
+
+
+def game_over(state):
+    print(state)
+
+
+start()

@@ -4,7 +4,6 @@ You go to sit at a table when you hear a small group of three trying to keep the
 
 intro_q = '''Why are they keeping so quiet? I could try to Listen in on their conversation,but it might be easier to just Disregard them'''
 
-answer = input("\nWhat should I do?\n>").lower()
 
 disregard_text = '''You go to an isolated table in the corner to sit back, relax, and enjoy the beautiful sound of the 
     instrument played by the bards on the stage. Out of the corner of your eye you see the small group stand up 
