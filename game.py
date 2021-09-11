@@ -18,6 +18,9 @@ def start():
         elif answer == "d" or answer == "disregard":
             # if d or disregard is typed for answer
             disregard()
+        elif answer == "exit":
+            if exit_game(input, "Goodbye.", "") == True:
+                break
         else:
             # calls game_over() function with a "reason" argument
             game_over(failed)
@@ -34,6 +37,17 @@ def listen():
 
 def follow():
     print(items.game_text.follow)
+
+
+def exit_game(input, if_yes, if_no):
+    input = input("Do you want to exit? (y/n)\n>").lower()
+    if input == "y":
+        print(if_yes)
+        return True
+    else:
+        print(if_no)
+        return False
+
 
 
 def game_over(state):
