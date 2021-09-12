@@ -1,3 +1,5 @@
 # Operation-Sage
 Medieval/Fantasy text based RPG
-Commit test
+
+#TODO
+* Create game state based on room occupied
