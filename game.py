@@ -21,9 +21,10 @@ def start():
         elif answer == "exit":
             if exit_game(input, "Goodbye.", "") == True:
                 break
+        elif answer == 'investigate' or answer == 'iv':
+            print(items.game_text.investigate)
         else:
-            # calls game_over() function with a "reason" argument
-            game_over(failed)
+            print("Invalid Option.\n Hint: type 'help' or 'h' for available options.")
 
 
 # listen to the group
