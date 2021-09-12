@@ -1,9 +1,9 @@
-import items.game_text
+import items.game_text as gt
 
 
 def start():
-    print(items.game_text.intro_message)
-    print(items.game_text.intro_q)
+    print(gt.intro_message)
+    print(gt.intro_q)
 
 
     while True:
@@ -22,22 +22,26 @@ def start():
             if exit_game(input, "Goodbye.", "") == True:
                 break
         elif answer == 'investigate' or answer == 'iv':
-            print(items.game_text.investigate)
+            print(gt[investigate])
+        elif answer == 'help' or answer == 'h':
+            print("Options:")
+            for option in gt.options:
+                print(f'\t{option}')
         else:
             print("Invalid Option.\n Hint: type 'help' or 'h' for available options.")
 
 
 # listen to the group
 def disregard():
-    print(items.game_text.disregard_text)
+    print(gt.options[disregard])
 
 
 def listen():
-    print(items.game_text.listen)
+    print(gt.options[listen])
 
 
 def follow():
-    print(items.game_text.follow)
+    print(gt.options[follow])
 
 
 def exit_game(input, if_yes, if_no):
