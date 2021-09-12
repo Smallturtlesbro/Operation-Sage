@@ -1,4 +1,5 @@
 # Operation-Sage
 Medieval/Fantasy text based RPG
-Simple escape room
 
+#TODO
+* Create game state based on room occupied
