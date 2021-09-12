@@ -7,7 +7,7 @@ def start():
 
 
     while True:
-        answer = input("\nWhat should I do?\n>")
+        answer = input("\nWhat should I do?\n>").lower().strip()
 
         failed = "Great, now the world has been destroyed because you decided you didn't want to choose one of the " \
                  "options."
@@ -22,9 +22,9 @@ def start():
             if exit_game(input, "Goodbye.", "") == True:
                 break
         elif answer == 'investigate' or answer == 'iv':
-            print(gt[investigate])
+            print(gt.options[investigate])
         elif answer == 'help' or answer == 'h':
-            print("Options:")
+            print("Options: option (shortcut)")
             for option in gt.options:
                 print(f'\t{option}')
         else:
@@ -33,15 +33,15 @@ def start():
 
 # listen to the group
 def disregard():
-    print(gt.options[disregard])
+    print(gt.options["disregard (d)"])
 
 
 def listen():
-    print(gt.options[listen])
+    print(gt.options["listen (l)"])
 
 
 def follow():
-    print(gt.options[follow])
+    print(gt.options["follow (f)"])
 
 
 def exit_game(input, if_yes, if_no):
