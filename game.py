@@ -1,47 +1,58 @@
-import items.game_text
+import items.game_text as gt
 
 
 def start():
-    print(items.game_text.intro_message)
-    print(items.game_text.intro_q)
+    print(gt.intro_message)
+    print(gt.intro_q)
+
 
     while True:
+        answer = input("\nWhat should I do?\n>").lower().strip()
+
         failed = "Great, now the world has been destroyed because you decided you didn't want to choose one of the " \
                  "options."
-        if items.game_text.answer == "l" or items.game_text.answer == "listen":
+
+        if answer == "l" or answer == "listen":
             # if l or listen is typed for answer
             listen()
-        elif items.game_text.answer == "d" or items.game_text.answer == "disregard":
+        elif answer == "d" or answer == "disregard":
             # if d or disregard is typed for answer
             disregard()
+        elif answer == "exit":
+            if exit_game(input, "Goodbye.", "") == True:
+                break
+        elif answer == 'investigate' or answer == 'iv':
+            print(gt.options[investigate])
+        elif answer == 'help' or answer == 'h':
+            print("Options: option (shortcut)")
+            for option in gt.options:
+                print(f'\t{option}')
         else:
-            # calls game_over() function with a "reason" argument
-            game_over(failed)
+            print("Invalid Option.\n Hint: type 'help' or 'h' for available options.")
 
 
 # listen to the group
 def disregard():
-    print(items.game_text.disregard_text)
-
-    if items.game_text.answer == "f" or items.game_text.answer == "follow":
-        follow()
-
-    elif items.game_text.answer == "s" or items.game_text.answer == "sleep":
-        game_over(items.game_text.sleep)
+    print(gt.options["disregard (d)"])
 
 
 def listen():
-    print(items.game_text.listen)
-    if items.game_text.answer == "c" or items.game_text.answer == "continue":
-        print("hi")
-    elif items.game_text.answer == "s" or items.game_text.answer == "step in":
-        print("hi")
-    else:
-        print("hi")
+    print(gt.options["listen (l)"])
 
 
 def follow():
-    print(items.game_text.follow)
+    print(gt.options["follow (f)"])
+
+
+def exit_game(input, if_yes, if_no):
+    input = input("Do you want to exit? (y/n)\n>").lower()
+    if input == "y":
+        print(if_yes)
+        return True
+    else:
+        print(if_no)
+        return False
+
 
 
 def game_over(state):
