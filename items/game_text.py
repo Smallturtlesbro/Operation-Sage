@@ -11,7 +11,7 @@ options = {
     responsible?  I could follow them without them even knowing, but it is getting late in the night and i am a 
     little tired.''',
 
-'sleep (s)': '''As the night goes on you contiue drinking that delicious Evermead. You rent a room upstairs with a nice view of the street. 
+'sleep (s)': '''As the night goes on you continue drinking that delicious Evermead. You rent a room upstairs with a nice view of the street. 
 You undress and lay down on the bed and almost immediatly fall asleep.
 \nYou wake up to some ear wrenching screeches. You look out the window to see some deathly looking dragon hawks with holes in their wings. 
 As you turn around to put your armor on your door gets busted down by humanoid creature dorned in so much plate that you cant see any skin other than the 
