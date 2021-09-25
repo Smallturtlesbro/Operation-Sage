@@ -3,6 +3,11 @@ Medieval/Fantasy text based RPG
 
 #TODO
 * Create game state based on room occupied
+* Create the player
+* Create the map 
+  * Create Scene (method inside tile class)
+  * refer to Start function for example
+
 
 #High level overview:
 
