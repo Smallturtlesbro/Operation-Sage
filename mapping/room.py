@@ -13,4 +13,9 @@ class MapTile():
     def intro_text(self):
         raise NotImplementedError("Create subclass instead.")
 
+cell = Room(4, 2)
+contents = ['bed', 'leg shackles', 'bucket', 'wooden plate', 'wooden cup',]
+for item in contents:
+    cell.contents.append(item)
 
+print(cell.contents)
