@@ -22,7 +22,7 @@ def start():
             if exit_game(input, "Goodbye.", "") == True:
                 break
         elif answer == 'investigate' or answer == 'iv':
-            print(gt.options[investigate])
+            print(gt.options['investigate (iv)'])
         elif answer == 'help' or answer == 'h':
             print("Options: option (shortcut)")
             for option in gt.options:
