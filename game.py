@@ -11,24 +11,26 @@ def start():
         failed = "Great, now the world has been destroyed because you decided you didn't want to choose one of the " \
                  "options."
 
-        if answer == "l" or answer == "listen":
-            # if l or listen is typed for answer
-            listen()
-        elif answer == "d" or answer == "disregard":
+        if answer == 'disregard' or answer == 'd':
             # if d or disregard is typed for answer
             disregard()
-        elif answer == "s" or answer == "sleep":
-            if sleep(input, gt.intro_message, "") == True:
-                return
-        elif answer == "e" or answer == "exit":
+        elif answer == 'exit' or answer == 'e':
             if exit_game(input, "Goodbye.", "") == True:
                 break
-        elif answer == 'investigate' or answer == 'iv':
-            investigate()
+        elif answer == 'eavesdrop' or answer == 'ev':
+            eavesdrop()
         elif answer == 'help' or answer == 'h':
             print("Options: option (shortcut)")
             for option in gt.options:
                 print(f'\t{option}')
+        elif answer == 'investigate' or answer == 'iv':
+            investigate()
+        elif answer == 'listen' or answer == 'l':
+            # if l or listen is typed for answer
+            listen()
+        elif answer == 'sleep' or answer == 's':
+            if sleep(input, gt.intro_message, "") == True:
+                return
         else:
             print("Invalid Option.\n Hint: type 'help' or 'h' for available options.")
 
@@ -47,6 +49,9 @@ def exit_game(input, if_yes, if_no):
         print(if_no)
         return False
 
+def eavesdrop():
+    print (gt.options["listen more (lm)"])
+
 
 def follow():
     print(gt.options["follow (f)"])
@@ -62,6 +67,10 @@ def game_over(state):
 
 def listen():
     print(gt.options["listen (l)"])
+
+
+def listen_more():
+    print(gt.options["listen more (lm)"])
 
 
 def sleep(input, if_yes, if_no):
