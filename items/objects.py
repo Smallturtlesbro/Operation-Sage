@@ -14,6 +14,8 @@ class Furniture:
         return self.name
 
 #Weapon
+
+
 class Dagger(Weapon):
     def __init__(self):
         self.name = "Dagger"
@@ -21,7 +23,7 @@ class Dagger(Weapon):
         self.damage = 10
 
 
-class Iron_bar(Weapon):
+class Iron_Bar(Weapon):
     def __init__(self):
         self.name = "Iron bar"
         self.description = "A one foot iron bar, Suitable for bludgeoning."
@@ -57,14 +59,19 @@ class Bucket(Furniture):
 
 
 #Consumable
+
+
 class Bread(Consumable):
     def __init__(self):
         self.name = "Bread"
         self.description = "A stale piece of bread."
 
-inventory = [Iron_bar(), Rock()]
+
+inventory = [Iron_Bar(), Rock()]
 for item in inventory:
     print(item, "-", item.description)
+
+
 
 
 

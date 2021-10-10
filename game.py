@@ -1,6 +1,48 @@
 import items.game_text as gt
+import items.objects as item
 
 
+def prison_cell():
+    inventory = ['Bread']
+    print("Escape from the cell!")
+    while True:
+        action_input = get_player_command()
+        if action_input in ['b', 'B']:
+            print("You walk over to the bed.")
+        elif action_input in ['c', 'C']:
+            print("You walk over to your chamber pot.")
+        elif action_input in ['p', 'P']:
+            print("you walk to your plate and cup.")
+        elif action_input in ['w', 'W']:
+            print("you walk over to the cellar window.")
+        elif action_input in ['i', 'I']:
+            print("Inventory:")
+            for item in inventory:
+                print('* ' + str(item))
+        else:
+            print("Invalid action!")
+
+
+def get_player_command():
+    return input('Action: ')
+
+def most_powerful_weapon(inventory):
+    max_damage = 0
+    best_weapon = None
+    for item in inventory:
+        try:
+            if item.damage > max_damage:
+                best_weapon = item
+                max_damage = item.damage
+        except AttributeError:
+            pass
+    return best_weapon
+
+
+prison_cell()
+
+
+'''
 def start():
     print(gt.intro_message)
 
@@ -85,3 +127,4 @@ def sleep(input, if_yes, if_no):
 
 
 start()
+'''

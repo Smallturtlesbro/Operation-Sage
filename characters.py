@@ -6,6 +6,7 @@ class Player:
                           ]
         self.x = 1
         self.y = 2
+
     def move(self,dx, dy):
         self.x += dx
         self.y += dy
